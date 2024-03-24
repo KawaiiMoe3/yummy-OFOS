@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Home Page</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: crimson;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .left img {
+    height: 40px; /* Adjust as needed */
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header .right .search {
+    position: relative;
+}
+
+header .right .search input {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+header .right .search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header .right .icons {
+    display: flex;
+    align-items: center;
+}
+
+header .right .dropdown {
+    position: relative;
+}
+
+header .right .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    right: 0;
+    top: 30px;
+}
+
+header .right .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .left img {
+    height: 50px; /* Adjust as needed */
+}
+
+footer .left .brand-info p {
+    margin: 5px 0;
+}
+
+footer .right p {
+    margin: 5px 0;
+}
+
+footer .right .follow a {
+    margin-right: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="left">
+                <a href="#" class="brand-logo"><img src="logo.png" alt="Logo"></a>
+            </div>
+            <div class="center">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Category</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right">
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                    <button><img src="search-icon.png" alt="Search"></button>
+                </div>
+                <div class="icons">
+                    <a href="#"><img src="cart-icon.png" alt="Cart"></a>
+                    <div class="dropdown">
+                        <a href="#"><img src="account-icon.png" alt="Account"></a>
+                        <div class="dropdown-content">
+                            <a href="#">My Account &gt;</a>
+                            <a href="#">Log Out &gt;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <!-- Content body here -->
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="left">
+                <div class="brand-info">
+                    <img src="brand-image.png" alt="Brand Image">
+                    <p>Brand Brief</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="contact">
+                    <p>Contact Us:</p>
+                    <p>Email: example@example.com</p>
+                    <p>Customer Service: 123-456-7890</p>
+                </div>
+                <div class="follow">
+                    <p>Follow Us:</p>
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="tiktok-icon.png" alt="TikTok"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

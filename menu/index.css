@@ -1,0 +1,256 @@
+/* #region Header */
+.header {
+    background-color: #29323c;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+}
+.header .left-brand{
+    min-width: 200px;
+}
+.header .left-brand img{
+    width: 200px;
+}
+.header .center-nav{
+    min-width: 400px;
+}
+.header .center-nav ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.center-nav ul li a{
+    color: white;
+    font-size: 18px;
+}
+.center-nav ul li a:hover{
+    color: crimson;
+}
+.header .right-nav{
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.header .right-nav .search{
+    cursor: pointer;
+}
+.header .right-nav .cart{
+    cursor: pointer;
+    position: relative;
+}
+.header .right-nav .cart span sup{
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+}
+.header .right-nav .account a{
+    padding: 5px 10px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 36px;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+}
+.header .right-nav .account a:hover{
+    background-color: crimson;
+}
+/* #endregion Header */
+
+/* #region Slider */
+.slider{
+    position: relative;
+    background-color: #000116;
+    width: 100%;
+    min-height: 500px;
+    margin-top: 90px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.slider .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+    clip-path: circle(0% at 0 50%);
+}
+.slider .slide.active{
+    /* display: block; */
+    clip-path: circle(150% at 0 50%);
+    transition: 0.5s;
+}
+.slider .slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .navigation{
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.slider:hover .navigation{
+    opacity: 1;
+}
+.prevBtn,.nextBtn{
+    z-index: 999;
+    font-size: 50px;
+    color: #222;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    cursor: pointer;
+}
+.prevBtn{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.nextBtn{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.slider .navigation-visibility{
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+}
+.slider .navigation-visibility .slide-icon{
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.5);
+    width: 20px;
+    height: 10px;
+    transform: translateY(-50px);
+    margin: 0 6px;
+    border-radius: 2px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+.slider .navigation-visibility .slide-icon.active{
+    background: crimson;
+}
+
+@media (max-width: 900px){
+    .slider{
+        width: 100%;
+    }
+}
+/* #endregion Slider */
+
+/* #region food-topic */
+.food-section{
+    margin: 50px 0;
+}
+.food-topic .food-topic-info{
+    width: 550px;
+    margin: 20px 0
+}
+.food-topic .food-topic-info .title{
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+}
+.food-topic .food-topic-info .brief{
+    font-size: 16px;
+    color: #7B7D7D;
+    text-align: justify;
+}
+.food-container{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.food-list{
+    width: 350px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin: 10px 0;
+    transition: 0.2s linear;
+}
+.food-list:hover{
+    box-shadow: 0 0 25px rgba(46, 46, 46, 0.2);
+    transform: translateY(-5px);
+}
+.food-list .food-top{
+    width: 350px;
+    /* border: 1px solid skyblue; */
+}
+.food-list img{
+    width: 349px;
+    object-fit: contain;
+}
+.food-center, .food-bottom{
+    background-color: white;
+    padding: 10px 20px;
+}
+.food-center p.food-title{
+    font-size: 25px;
+    font-weight: 500;
+}
+.food-center p.food-brief{
+    margin: 10px 0;
+    font-size: 12px;
+    text-align: justify;
+    color: #7B7D7D;
+}
+.food-list .food-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.food-bottom p.food-price{
+    font-size: 25px;
+    color: crimson;
+}
+.food-bottom button{
+    padding: 5px 10px;
+    color: black;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+    cursor: pointer;
+}
+.food-bottom button:hover{
+    background-color: crimson;
+    color: white;
+}
+/* #endregion food-topic */
+
+/* #region View All Button */
+.viewAll{
+    text-align: center;
+}
+.viewAll .viewAllBtn{
+    padding: 5px 10px;
+    color: black;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+    cursor: pointer;
+}
+.viewAll .viewAllBtn:hover{
+    background-color: crimson;
+    color: white;
+}
+/* #endregion View All Button */
+
