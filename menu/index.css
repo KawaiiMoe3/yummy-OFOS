@@ -46,10 +46,17 @@
     cursor: pointer;
     position: relative;
 }
-.header .right-nav .cart span sup{
+.header .right-nav .cart span{
+    width: 20px;
+    height: 20px;
+    border: 1px solid red;
+    border-radius: 50%;
+    background-color: crimson;
+    color: white;
     font-size: 12px;
     position: absolute;
     top: -5px;
+    text-align: center;
 }
 .header .right-nav .account a{
     padding: 5px 10px;
@@ -179,6 +186,7 @@
     box-sizing: border-box;
     margin: 10px 0;
     transition: 0.2s linear;
+    border-radius: 10px;
 }
 .food-list:hover{
     box-shadow: 0 0 25px rgba(46, 46, 46, 0.2);
@@ -191,6 +199,12 @@
 .food-list img{
     width: 349px;
     object-fit: contain;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.food-list .food-bottom{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .food-center, .food-bottom{
     background-color: white;
@@ -219,6 +233,7 @@
     color: black;
     background-color: transparent;
     border: 2px solid crimson;
+    border-radius: 10px;
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -232,6 +247,73 @@
 }
 /* #endregion food-topic */
 
+.cartTab{
+    width: 400px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    inset: 90px -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+body.showCart .cartTab{
+    inset: 90px 0 0 auto;
+}
+body.showCart .container{
+    transform: translateX(-200px);
+}
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab .btn button{
+    background-color: #e8bc0e;
+    border: none;
+    cursor: pointer;
+}
+.cartTab .btn .close{
+    background-color: #eee;
+}
+.cartTab .listCart .item img{
+    width: 100%;
+}
+.cartTab .listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+}
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+
 /* #region View All Button */
 .viewAll{
     text-align: center;
@@ -241,6 +323,7 @@
     color: black;
     background-color: transparent;
     border: 2px solid crimson;
+    border-radius: 10px;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -254,3 +337,84 @@
 }
 /* #endregion View All Button */
 
+/* #region Footer */
+.footer{
+    background-color: #29323c;
+    width: 100%;
+    margin-top: 50px;
+}
+.footer-container{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .footer-left{
+    width: 250px;
+}
+.footer-left .brand img{
+    width: 200px;
+}
+.footer-left .address{
+    color: white;
+    font-size: 16px;
+}
+.footer-left .copyright{
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.footer-right{
+    display: flex;
+    /* border: 1px solid red; */
+}
+.footer-right ul.contact{
+    width: 200px;
+    /* border: 1px solid skyblue; */
+    margin-right: 30px
+}
+.footer-right ul li:first-child{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.footer-right ul li:not(:first-child){
+    margin: 10px 0;
+}
+.footer-right ul li a img{
+    margin-right: 5px;
+}
+.footer-right ul li a{
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid yellow; */
+}
+.footer-right ul li a:hover{
+    color: crimson;
+    font-size: 14px;
+}
+/* #endregion Footer */
+
+/* #region goToTopBtn */
+#goToTopBtn{
+    display: none;
+    position: fixed;
+    height: 50px;
+    bottom: 20px;
+    right: 30px;
+    z-index: 999;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+#goToTopBtn:hover{
+    background-color: red;
+}
+/* #endregion goToTopBtn */

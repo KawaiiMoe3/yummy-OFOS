@@ -18,6 +18,7 @@ a{
 .container{
     max-width: 1200px;
     margin: 0 auto;
+    transition: transform .5s;
 }
 ul{
     list-style-type: none;
