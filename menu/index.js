@@ -102,9 +102,6 @@ function scrollFunction() {
 let cart = document.querySelector('.cart')
 let closeCart = document.querySelector('.close')
 let body = document.querySelector('body')
-let foodListHTML =  document.querySelector('.food-list')
-
-let foodList = []
 
 //When user click the cart icon, show/hide the cart
 cart.addEventListener('click', () => {
@@ -115,49 +112,18 @@ closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart')
 })
 
-const addDataToHTML = () => {
-    foodListHTML.innerHTML = ''
-    if(foodList.length > 0){
-        foodList.forEach(food => {
-            let newFood = document.createElement('div')
-            newFood.classList.add('.food-list')
-            newFood.dataset.id = food.id
-            newFood.innerHTML = `
-                <div class="food-top">
-                    <img src="${food.image}" alt="food-picture">
-                </div>
-                <div class="food-center">
-                    <p class="food-title">${food.name}</p>
-                    <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                </div>
-                <div class="food-bottom">
-                    <p class="food-price">RM ${food.price}</p>
-                    <button class="addCart">
-                        Add To Cart
-                    </button>
-                </div>
-            `
-            foodListHTML.appendChild(newFood)
-        })
-    }
-}
-foodListHTML.addEventListener('click', (event) => {
-    let positionClick = event.target
-    if (positionClick.classList.contains('addCart')) {
-        let food_id = positionClick.parentElement.dataset.id
-        console.log(food_id);
-        alert(food_id)
-    }
-})
+//Search bar
+let searchBtn = document.querySelector('.searchBtn')
+let closeBtn = document.querySelector('.closeBtn')
+let searchBox = document.querySelector('.search-box')
 
-const initMenu = () => {
-    //Get data from json
-    fetch('foods.json')
-    .then(response => response.json())
-    .then(data => {
-        foodList = data
-        // console.log(foodList);
-        addDataToHTML()
-    })
-}
-initMenu()
+searchBtn.addEventListener('click', function(){
+    searchBox.classList.add('active-search')
+    closeBtn.classList.add('active-search')
+    searchBtn.classList.add('active-search')
+})
+closeBtn.addEventListener('click', function(){
+    searchBox.classList.remove('active-search')
+    closeBtn.classList.remove('active-search')
+    searchBtn.classList.remove('active-search')
+})
