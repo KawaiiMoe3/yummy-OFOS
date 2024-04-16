@@ -17,6 +17,12 @@ label {
 	font-size: 2rem;
 }
 
+.errorMsg{
+    text-align: center;
+    color: white;
+    background-color: red;
+}
+
 input{
     margin: 0;
     font-family: inherit;

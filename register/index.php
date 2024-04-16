@@ -1,56 +1,66 @@
 <?php
-// require_once('config.php');
+require_once('../db_setup/db.php');
 
-// if(isset($_POST['create'])){
-//     $username = $_POST["username"];  
-//     $email = $_POST["email"];  
-//     $phoneNumber = $_POST["phoneNumber"];  
-//     $password = $_POST["password"];   
+if(isset($_POST['create'])){
+    $username = $_POST["username"];  
+    $email = $_POST["email"];  
+    $phoneNumber = $_POST["phoneNumber"];  
+    $address = $_POST["address"];  
+    $password = $_POST["password"];  
+	
+	$hashedPassword = md5($password);
 
-//     // Check if user with same email or username already exists
-//     $check_query = "SELECT * FROM users WHERE email=? OR username=?";
-//     $check_stmt = mysqli_prepare($conn, $check_query);
-//     mysqli_stmt_bind_param($check_stmt, "ss", $email, $username);
-//     mysqli_stmt_execute($check_stmt);
-//     $result = mysqli_stmt_get_result($check_stmt);
+    // Check if user with same email or username already exists
+    $check_query = "SELECT * FROM users WHERE email=? OR username=?";
+    $check_stmt = mysqli_prepare($conn, $check_query);
+    mysqli_stmt_bind_param($check_stmt, "ss", $email, $username);
+    mysqli_stmt_execute($check_stmt);
+    $result = mysqli_stmt_get_result($check_stmt);
     
-//     if(mysqli_num_rows($result) > 0) {
-//         //echo "Error: User with the same email or username already exists.";
-// 		echo "<span class='error-message'>Error: User with the same email or username already exists.</span>";
-//         //exit(); // Stop further execution
-//     } else {
-//         // Insert data into the database
-//         $insert_query = "INSERT INTO users (username, email, phoneNumber, password) VALUES(?,?,?,?)";
-//         $insert_stmt = mysqli_prepare($conn, $insert_query);
-//         mysqli_stmt_bind_param($insert_stmt, "ssss", $username, $email, $phoneNumber, $password);
-//         mysqli_stmt_execute($insert_stmt);
+    if(mysqli_num_rows($result) > 0) {
+        //echo "Error: User with the same email or username already exists.";
+		echo "
+			<script>
+				onload = function(){
+					document.querySelector('#errorMsg').innerHTML = 'User with the same email or username already exists.'
+				}
+			</script>
+		";
+        //exit(); // Stop further execution
+    } else {
+        // Insert data into the database
+        $insert_query = "INSERT INTO users (username, email, phoneNumber, address, password) VALUES(?,?,?,?,?)";
+        $insert_stmt = mysqli_prepare($conn, $insert_query);
+        mysqli_stmt_bind_param($insert_stmt, "sssss", $username, $email, $phoneNumber, $address , $hashedPassword);
+        mysqli_stmt_execute($insert_stmt);
 		
-//         mysqli_stmt_close($insert_stmt);
+        mysqli_stmt_close($insert_stmt);
 		
-// 		sleep(2);
-// 		header("Location: ../index.html");
+		sleep(2);
+		header("Location: ../login");
 		
 		
 		
-// 		exit(); // Stop further execution
+		exit(); // Stop further execution
 		
-//     }
+    }
 
-//     mysqli_stmt_close($check_stmt);
-//     mysqli_close($conn);
-// }
+    mysqli_stmt_close($check_stmt);
+    mysqli_close($conn);
+}
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>SignUp | YUMMY</title>
-    
+    <link rel="icon" type="image.x-icon" href="../images/index/Logo Files/For Web/Favicons/browser.png">
     <link rel="stylesheet" href="index.css">
     
 </head>
 <body>
     <div>
+		<div id="errorMsg" class="errorMsg"></div>
         <form method="post">
             <div class="container">
                 <div class="row">
@@ -71,6 +81,10 @@
                         <label for="phoneNumber"><b>Phone Number</b></label>
                         <input class="form" id="phoneNumber" type="text" name="phoneNumber" required>
                         <span class="error" id="phoneErr"><?php echo isset($phoneErr) ? $phoneErr : ''; ?></span><br>
+
+						<label for="address"><b>Address</b></label>
+                        <input class="form" id="address" type="text" name="address" required>
+                        <span class="error" id="addressErr"><?php echo isset($addressErr) ? $addressErr : ''; ?></span><br>
                         
                         <label for="password"><b>Password</b></label>
                         <input class="form" id="password" type="password" name="password" required>
@@ -99,10 +113,11 @@
 				var username = $('#username').val();
 				var email = $('#email').val();
 				var phoneNumber = $('#phoneNumber').val();
+				var address = $('#address').val();
 				var password = $('#password').val();
 				
 				// Perform client-side validation
-				var nameErr = emailErr = phoneErr = passwordErr = '';
+				var nameErr = emailErr = phoneErr = addressErr = passwordErr = '';
 				
 				if (username.trim() === '') {
 					nameErr = 'Username is required';
@@ -115,6 +130,10 @@
 				if (phoneNumber.trim() === '' || !isValidPhoneNumber(phoneNumber)) {
 					phoneErr = 'Invalid phone number format';
 				}
+
+				if (address.trim() === '') {
+					addressErr = 'Address is required';
+				}
 				
 				if (password.trim() === '' || password.length < 8) {
 					passwordErr = 'Password must be at least 8 characters long';
@@ -124,13 +143,14 @@
 				$('#nameErr').text(nameErr);
 				$('#emailErr').text(emailErr);
 				$('#phoneErr').text(phoneErr);
+				$('#addressErr').text(addressErr);
 				$('#passwordErr').text(passwordErr);
 				
-				if (nameErr || emailErr || phoneErr || passwordErr) {
+				if (nameErr || emailErr || phoneErr || addressErr || passwordErr) {
 					Swal.fire({
 						icon: 'error',
 						title: 'Oops...',
-						text: 'Please fix the errors!'
+						text: 'Please enter valid value.'
 					});
 					event.preventDefault(); // Prevent default form submission
 				} else {

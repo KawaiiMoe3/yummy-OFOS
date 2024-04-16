@@ -142,7 +142,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" type="button" class="btn-index">Contact Us</a>
+            <a href="./contactUs" type="button" class="btn-index">Contact Us</a>
         </div>
     </section>
     <!-- Contact end -->

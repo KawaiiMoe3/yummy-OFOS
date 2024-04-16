@@ -1,4 +1,6 @@
-<?php include "../includes/menu_includes/header.php" ?>
+<?php
+    include "../includes/menu_includes/header.php" 
+?>
 
     <!-- Slider start -->
     <div class="container">
@@ -32,7 +34,7 @@
         </div>
     </div>
     <!-- Slider end -->
-
+    
     <!-- Daily Discover start -->
     <div class="container">
         <div class="food-section">

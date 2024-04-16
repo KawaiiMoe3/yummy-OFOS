@@ -1,3 +1,8 @@
+<?php 
+	include "../db_setup/db.php"; 
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +45,18 @@
                     <span>0</span>
                 </div>
                 <div class="account">
-                    <a href="../login">Login</a>
+                    <?php
+                        if(isset($_SESSION['login'])){
+                            ?>
+                            <a href="../logout">Logout</a>
+                            <?php
+                        }
+                        else{
+                            ?>
+                            <a href="../login">Login</a>
+                            <?php
+                        }
+                    ?>
                 </div>
             </div>
         </div>
