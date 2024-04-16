@@ -4,7 +4,7 @@
 $dbHost = 'localhost';
 $dbUsername = 'root';
 $dbPassword = '';
-$dbName = 'yummy';
+$dbName = 'yummydb';
 
 // Connect to database
 $conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
