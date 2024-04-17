@@ -45,58 +45,40 @@
                 </div>
             </div>
             <div class="food-container">
-                <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
+                <?php
+                $dailyDiscover = "SELECT * FROM foodmenu WHERE foodCategory = 'Daily Discover' ORDER BY RAND() LIMIT 6";
+                $menuDd = mysqli_query($conn, $dailyDiscover);
+                while($row = mysqli_fetch_assoc($menuDd)){
+                    ?>
+                    <div class="food-items">
+                        <img src="../images/FoodMenu/<?php echo $row['foodImage']; ?>" alt="">
+                        <div class="food-details">
+                            <div class="details-sub">
+                                <h5><?php echo $row['foodName']; ?></h5>
+                                <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
+                            </div>
+                            <p><?php echo $row['foodDescription']; ?></p>
+                            <?php
+                            if (isset($_SESSION['login'])){
+                                ?>
+                                <a href="#">
+                                    Add To Cart
+                                </a>
+                                <?php
+                            }
+                            else{
+                                ?>
+                                <a href="../login">
+                                    Add To Cart
+                                </a>
+                                <?php
+                            }
+                            ?>
                         </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
                     </div>
-                </div>
-                <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
-                        </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
-                    </div>
-                </div>
-                <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
-                        </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
-                    </div>
-                </div>
-                <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
-                        </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -112,45 +94,40 @@
                 </div>
             </div>
             <div class="food-container">
-            <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
+            <?php
+                $breakfast = "SELECT * FROM foodmenu WHERE foodCategory = 'Breakfast' ORDER BY RAND() LIMIT 3";
+                $menuB = mysqli_query($conn, $breakfast);
+                while($row = mysqli_fetch_assoc($menuB)){
+                    ?>
+                    <div class="food-items">
+                        <img src="../images/FoodMenu/<?php echo $row['foodImage']; ?>" alt="">
+                        <div class="food-details">
+                            <div class="details-sub">
+                                <h5><?php echo $row['foodName']; ?></h5>
+                                <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
+                            </div>
+                            <p><?php echo $row['foodDescription']; ?></p>
+                            <?php
+                            if (isset($_SESSION['login'])){
+                                ?>
+                                <a href="#">
+                                    Add To Cart
+                                </a>
+                                <?php
+                            }
+                            else{
+                                ?>
+                                <a href="../login">
+                                    Add To Cart
+                                </a>
+                                <?php
+                            }
+                            ?>
                         </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
                     </div>
-                </div>
-                <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
-                        </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
-                    </div>
-                </div>
-                <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
-                        </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -166,45 +143,40 @@
                 </div>
             </div>
             <div class="food-container">
-            <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
+            <?php
+                $dessert = "SELECT * FROM foodmenu WHERE foodCategory = 'Dessert' ORDER BY RAND() LIMIT 3";
+                $menuDe = mysqli_query($conn, $dessert);
+                while($row = mysqli_fetch_assoc($menuDe)){
+                    ?>
+                    <div class="food-items">
+                        <img src="../images/FoodMenu/<?php echo $row['foodImage']; ?>" alt="">
+                        <div class="food-details">
+                            <div class="details-sub">
+                                <h5><?php echo $row['foodName']; ?></h5>
+                                <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
+                            </div>
+                            <p><?php echo $row['foodDescription']; ?></p>
+                            <?php
+                            if (isset($_SESSION['login'])){
+                                ?>
+                                <a href="#">
+                                    Add To Cart
+                                </a>
+                                <?php
+                            }
+                            else{
+                                ?>
+                                <a href="../login">
+                                    Add To Cart
+                                </a>
+                                <?php
+                            }
+                            ?>
                         </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
                     </div>
-                </div>
-                <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
-                        </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
-                    </div>
-                </div>
-                <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
-                        </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -220,45 +192,40 @@
                 </div>
             </div>
             <div class="food-container">
-            <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
+            <?php
+                $western = "SELECT * FROM foodmenu WHERE foodCategory = 'Western' ORDER BY RAND() LIMIT 3";
+                $menuWes = mysqli_query($conn, $western);
+                while($row = mysqli_fetch_assoc($menuWes)){
+                    ?>
+                    <div class="food-items">
+                        <img src="../images/FoodMenu/<?php echo $row['foodImage']; ?>" alt="">
+                        <div class="food-details">
+                            <div class="details-sub">
+                                <h5><?php echo $row['foodName']; ?></h5>
+                                <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
+                            </div>
+                            <p><?php echo $row['foodDescription']; ?></p>
+                            <?php
+                            if (isset($_SESSION['login'])){
+                                ?>
+                                <a href="#">
+                                    Add To Cart
+                                </a>
+                                <?php
+                            }
+                            else{
+                                ?>
+                                <a href="../login">
+                                    Add To Cart
+                                </a>
+                                <?php
+                            }
+                            ?>
                         </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
                     </div>
-                </div>
-                <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
-                        </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
-                    </div>
-                </div>
-                <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
-                        </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -274,45 +241,40 @@
                 </div>
             </div>
             <div class="food-container">
-            <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
+            <?php
+                $beverages = "SELECT * FROM foodmenu WHERE foodCategory = 'Drinks' ORDER BY RAND() LIMIT 3";
+                $menuBv = mysqli_query($conn, $beverages);
+                while($row = mysqli_fetch_assoc($menuBv)){
+                    ?>
+                    <div class="food-items">
+                        <img src="../images/FoodMenu/<?php echo $row['foodImage']; ?>" alt="">
+                        <div class="food-details">
+                            <div class="details-sub">
+                                <h5><?php echo $row['foodName']; ?></h5>
+                                <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
+                            </div>
+                            <p><?php echo $row['foodDescription']; ?></p>
+                            <?php
+                            if (isset($_SESSION['login'])){
+                                ?>
+                                <a href="#">
+                                    Add To Cart
+                                </a>
+                                <?php
+                            }
+                            else{
+                                ?>
+                                <a href="../login">
+                                    Add To Cart
+                                </a>
+                                <?php
+                            }
+                            ?>
                         </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
                     </div>
-                </div>
-                <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
-                        </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
-                    </div>
-                </div>
-                <div class="food-items">
-                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
-                    <div class="food-details">
-                        <div class="details-sub">
-                            <h5>Salmon Fried Rice</h5>
-                            <h5 class="food-price">RM 15.00</h5>
-                        </div>
-                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                        <a href="../login">
-                            Add To Cart
-                        </a>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
     </div>
