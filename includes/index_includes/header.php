@@ -1,3 +1,8 @@
+<?php 
+	include "./db_setup/db.php"; 
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,29 +26,62 @@
                     <div class="collapse">
                         <div class="bar"></div>
                     </div>
-                    <ul>
-                        <li>
-                            <a href="#hero" data-after="Home">Home</a>
-                        </li>
+                    <?php
+                    if (isset($_SESSION['login'])) {
+                        ?>
+                        <ul>
+                            <li>
+                                <a href="#hero" data-after="Home">Home</a>
+                            </li>
 
-                        <li>
-                            <a href="#services" data-after="Service">Service</a>
-                        </li>
+                            <li>
+                                <a href="#services" data-after="Service">Service</a>
+                            </li>
 
-                        <li>
-                            <a href="#foods" data-after="foods">Food</a>
-                        </li>
+                            <li>
+                                <a href="#foods" data-after="foods">Food</a>
+                            </li>
 
-                        <li>
-                            <a href="#about" data-after="About">About</a>
-                        </li>
-                        <li>
-                            <a href="#contact" data-after="Contact">Contact</a>
-                        </li>
-                        <li>
-                            <a href="./login" class="btn-index">Login</a>
-                        </li>
-                    </ul>
+                            <li>
+                                <a href="#about" data-after="About">About</a>
+                            </li>
+                            <li>
+                                <a href="#contact" data-after="Contact">Contact</a>
+                            </li>
+                            <li>
+                                <a href="./logout" class="btn-index">Logout</a>
+                            </li>
+                        </ul>
+                        <?php
+                    }
+                    else{
+                        ?>
+                        <ul>
+                            <li>
+                                <a href="#hero" data-after="Home">Home</a>
+                            </li>
+    
+                            <li>
+                                <a href="#services" data-after="Service">Service</a>
+                            </li>
+    
+                            <li>
+                                <a href="#foods" data-after="foods">Food</a>
+                            </li>
+    
+                            <li>
+                                <a href="#about" data-after="About">About</a>
+                            </li>
+                            <li>
+                                <a href="#contact" data-after="Contact">Contact</a>
+                            </li>
+                            <li>
+                                <a href="./login" class="btn-index">Login</a>
+                            </li>
+                        </ul>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
