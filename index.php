@@ -4,9 +4,23 @@
     <section id="hero">
         <div class="hero container">
             <div>
+            <?php
+            if (isset($_SESSION['login'])) {
+                ?>
+                <h1>Begin<span></span></h1>
+                <h1>Your Tasty,<span></span></h1>
+                <h1><?php echo $_SESSION['login'] ?><span></span></h1>
+                <?php
+            }
+            else{
+                ?>
                 <h1>Savor<span></span></h1>
                 <h1>Extraordinary Tastes<span></span></h1>
                 <h1>Only With YUMMY<span></span></h1>
+                <?php
+            }
+            ?>
+                
                 <a href="./menu" type="button" class="btn-index">Discover Menu</a>
             </div>
         </div>

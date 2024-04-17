@@ -45,94 +45,56 @@
                 </div>
             </div>
             <div class="food-container">
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button class="addCart">
+                <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+                <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+                <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+                <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -150,94 +112,43 @@
                 </div>
             </div>
             <div class="food-container">
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+            <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+                <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+                <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -255,94 +166,43 @@
                 </div>
             </div>
             <div class="food-container">
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+            <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+                <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+                <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -360,94 +220,43 @@
                 </div>
             </div>
             <div class="food-container">
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+            <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+                <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+                <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -465,94 +274,43 @@
                 </div>
             </div>
             <div class="food-container">
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+            <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+                <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
+                <div class="food-items">
+                    <img src="../images/FoodMenu/Salmon-Fried-Rice.jpg" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5>Salmon Fried Rice</h5>
+                            <h5 class="food-price">RM 15.00</h5>
+                        </div>
+                        <p>Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
+                        <a href="../login">
                             Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="food-list">
-                    <div class="food-top">
-                        <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="food-picture">
-                    </div>
-                    <div class="food-center">
-                        <p class="food-title">Salmon Fried Rice</p>
-                        <p class="food-brief">Salmon fried rice is a flavorful dish combining cooked rice, salmon pieces, vegetables, and seasonings stir-fried together.</p>
-                    </div>
-                    <div class="food-bottom">
-                        <p class="food-price">RM 15.00</p>
-                        <button>
-                            Add To Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -563,7 +321,7 @@
     <!-- View All Button start -->
     <div class="container">
         <div class="viewAll">
-            <a href="#" class="viewAllBtn">View All</a>
+            <a href="../menu/foodMenu.php" class="viewAllBtn">View All</a>
         </div>
     </div>
     <!-- View All Button end -->
@@ -629,13 +387,3 @@
     <!-- Shopping Cart end -->
 
     <?php include "../includes/menu_includes/footer.php" ?>
-
-    <!-- goToTopBtn start -->
-    <button id="goToTopBtn" title="Go to top">
-        <img src="../images/Menu/arrow-up.png" alt="">
-    </button>
-    <!-- goToTopBtn end -->
-
-    <script src="../js/menu.js"></script>
-</body>
-</html>

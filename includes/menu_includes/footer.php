@@ -53,3 +53,13 @@
         </div>
     </div>
     <!-- Footer end -->
+
+    <!-- goToTopBtn start -->
+    <button id="goToTopBtn" title="Go to top">
+        <img src="../images/Menu/arrow-up.png" alt="">
+    </button>
+    <!-- goToTopBtn end -->
+
+    <script src="../js/menu.js"></script>
+    </body>
+</html>
