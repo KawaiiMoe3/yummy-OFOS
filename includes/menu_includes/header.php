@@ -1,8 +1,7 @@
 <?php 
 	include "../db_setup/db.php"; 
-	session_start();
+    session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YUMMY | Menu</title>
     <link rel="icon" type="image.x-icon" href="../images/index/Logo Files/For Web/Favicons/browser.png">
+    
     <link rel="stylesheet" href="../css/defaultCss.css">
     <link rel="stylesheet" href="../css/menu.css">
 </head>
 <body class="">
     <!-- Header start -->
+
     <div class="header">
         <div class="container">
             <div class="left-brand">
@@ -25,7 +26,7 @@
             <div class="center-nav">
                 <ul>
                     <li><a href="./">HOME</a></li>
-                    <li><a href="#">CATEGORY</a></li>
+                    <li><a href="../menu/foodCategory.php">CATEGORY</a></li>
                     <li><a href="../menu/foodMenu.php">MENU</a></li>
                     <li><a href="../faq">FAQs</a></li>
                 </ul>
@@ -34,19 +35,10 @@
             if (isset($_SESSION['login'])) {
                 ?>
                 <div class="right-nav">
-                    <div class="search">
-                        <span class="search-icon">
-                            <img class="searchBtn" src="../images/Menu/search-interface-symbol.png" alt="">
-                            <img class="closeBtn" src="../images/Menu/close.png" alt="">
-                        </span>
-                    </div>
-                    <div class="search-box">
-                        <input type="text" name="search" id="searchBox" placeholder="search food..">
-                    </div>
-                    <div class="cart">
+                    <a href="#" class="cart">
                         <img src="../images/Menu/shopping-cart.png" alt="">
                         <span>0</span>
-                    </div>
+                    </a>
                     <div class="dropdown">
                         <button onclick="myDropdown()" class="dropbtn"><?php echo $_SESSION['login'] ?></button>
                         <div id="myDropdown" class="dropdown-content">
@@ -91,15 +83,6 @@
             else{
                 ?>
                 <div class="right-nav">
-                    <div class="search">
-                        <span class="search-icon">
-                            <img class="searchBtn" src="../images/Menu/search-interface-symbol.png" alt="">
-                            <img class="closeBtn" src="../images/Menu/close.png" alt="">
-                        </span>
-                    </div>
-                    <div class="search-box">
-                        <input type="text" name="search" id="searchBox" placeholder="search food..">
-                    </div>
                     <div class="cart">
                     </div>
                     <div class="account">
@@ -109,7 +92,18 @@
             <?php
             }
             ?>
-            
         </div>
-    </div>
+        <div class="container">
+            <div class="search-wrap">
+                <div class="search-box">
+                    <form action="../menu/foodSearch.php" method="post">
+                        <input type="text" class="search-input" placeholder="Search food.." name="search">
+                        <button type="submit" name="submit" class="searchBtn">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
     <!-- Header end -->

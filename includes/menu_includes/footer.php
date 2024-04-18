@@ -55,11 +55,12 @@
     <!-- Footer end -->
 
     <!-- goToTopBtn start -->
-    <button id="goToTopBtn" title="Go to top">
+    <button id="goToTopBtn" class="goToTopBtn" title="Go to top">
         <img src="../images/Menu/arrow-up.png" alt="">
     </button>
     <!-- goToTopBtn end -->
 
     <script src="../js/menu.js"></script>
+    <script src="https://kit.fontawesome.com/62d6e94175.js" crossorigin="anonymous"></script>
     </body>
 </html>

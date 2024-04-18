@@ -1,0 +1,27 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Profile</title>
+ </head>
+ <body>
+ <div>
+ <h1>Hi <?php echo $_SESSION['username']; ?></h1>
+ <a href="new_username.php">Change Username</a><br>
+ <a href="new_pw.php">Change Password</a>
+ <h3>Your Current Address: </h3>
+ <h3><?php echo $_SESSION['address'];?> </h3>
+ 
+ <a href="new_address.php">Wrong Address? </a>
+ 
+ <h3>Phone number: </h3>
+ <h3><?php echo $_SESSION['phoneNumber'];?></h3>
+ 
+ <a href="new_phone.php">Wrong phone number? </a>
+ 
+ </body>
+ </html>
+ 
