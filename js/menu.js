@@ -97,33 +97,3 @@ function scrollFunction() {
         goToTopBtn.style.display = "none";
     }
 }
-
-//Shooping Cart
-let cart = document.querySelector('.cart')
-let closeCart = document.querySelector('.close')
-let body = document.querySelector('body')
-
-//When user click the cart icon, show/hide the cart
-cart.addEventListener('click', () => {
-    body.classList.toggle('showCart')
-})
-//When user click the close button, show/hide the cart
-closeCart.addEventListener('click', () => {
-    body.classList.toggle('showCart')
-})
-
-//Search bar
-let searchBtn = document.querySelector('.searchBtn')
-let closeBtn = document.querySelector('.closeBtn')
-let searchBox = document.querySelector('.search-box')
-
-searchBtn.addEventListener('click', function(){
-    searchBox.classList.add('active-search')
-    closeBtn.classList.add('active-search')
-    searchBtn.classList.add('active-search')
-})
-closeBtn.addEventListener('click', function(){
-    searchBox.classList.remove('active-search')
-    closeBtn.classList.remove('active-search')
-    searchBtn.classList.remove('active-search')
-})

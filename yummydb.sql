@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 17, 2024 at 07:32 PM
+-- Generation Time: Apr 18, 2024 at 05:21 PM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -20,6 +20,35 @@ SET time_zone = "+00:00";
 --
 -- Database: `yummydb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `foodcategory`
+--
+
+DROP TABLE IF EXISTS `foodcategory`;
+CREATE TABLE IF NOT EXISTS `foodcategory` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `categoryName` varchar(255) NOT NULL,
+  `categoryImage` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
+
+--
+-- Dumping data for table `foodcategory`
+--
+
+INSERT INTO `foodcategory` (`id`, `categoryName`, `categoryImage`) VALUES
+(1, 'Fried Rice', 'FriedRice.jpg'),
+(2, 'Drinks', 'Drinks.jpg'),
+(3, 'Pizza', 'Pizza.jpg'),
+(4, 'Dim Sum', 'DimSum.jpg'),
+(5, 'Breakfast', 'Breakfast.jpg'),
+(6, 'Dessert', 'Macarons.jpg'),
+(7, 'Western', 'Western.jpg'),
+(8, 'Chinese Style', 'ChineseStyle.jpg'),
+(9, 'Fast Food', 'FastFood.jpg');
 
 -- --------------------------------------------------------
 
@@ -59,7 +88,7 @@ INSERT INTO `foodmenu` (`id`, `foodName`, `foodDescription`, `foodCategory`, `fo
 (14, 'Red Bean Buns', 'Soft, fluffy steamed buns filled with sweet, creamy red bean paste, Chinese red bean buns taste amazing when made from scratch.', 'Dim Sum', '3.90', 'RedBeanBao.jpg'),
 (15, 'Kaya Butter Toast', 'Crispy toasted bread, slathered with a nice layer aromatic kaya jam (Malaysian coconut egg jam), and complete with a thin slice of cold butter.', 'Breakfast', '5.90', 'KayaButterToast.jpg'),
 (16, 'Cappucino', 'An espresso-based coffee drink that is traditionally prepared with steamed milk including a layer of milk foam.', 'Daily Discover', '6.90', 'Cappucino.jpg'),
-(17, 'Hainanese Chicken Rice', 'A comforting, one-pot dish featuring tender poached chicken and fragrant rice cooked in chicken broth.', 'Rice', '15.90', 'HainaneseChickenRice.jpg'),
+(17, 'Hainanese Chicken Rice', 'A comforting, one-pot dish featuring tender poached chicken and fragrant rice cooked in chicken broth.', 'Chinese Style', '15.90', 'HainaneseChickenRice.jpg'),
 (18, 'Nasi Lemak Ayam', 'The rice is cooked with coconut milk to give it a unique taste and fragrance with fried chicken.', 'Daily Discover', '10.90', 'NasiLemakAyam.jpg'),
 (19, 'Lemon Ice Tea', 'Refreshing and fruity ice tea with lemon is the perfect drink for summer.', 'Daily Discover', '4.90', 'LemonIceTea.jpg'),
 (20, 'Spaghetti Carbonara', 'This classic Italian pasta dish combines a silky cheese sauce with crisp pancetta and black pepper.', 'Daily Discover', '12.90', 'SpaghettiCarbonara.jpg'),
