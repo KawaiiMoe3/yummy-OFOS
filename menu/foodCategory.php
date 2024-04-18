@@ -36,7 +36,37 @@
 
     <!-- Food menu start -->
     <div class="container">
-        
+        <div class="food-section">
+            <div class="food-topic">
+                <div class="food-topic-info">
+                    <p class="title">Food Categories</p>
+                    <p class="brief">Make easier to find your Tasty in YUMMY!</p>
+                </div>
+            </div>
+            <div class="food-container">
+                <?php
+                $sql = "SELECT * FROM foodcategory ORDER BY categoryName ASC";
+                $res = mysqli_query($conn, $sql);
+
+                //Fetch the food category from database
+                if (mysqli_num_rows($res) > 0) {
+                    while ($row = mysqli_fetch_assoc($res)) {
+                        $id = $row['id'];
+                        ?>
+                        <a href="../menu/filteredFood.php?id=<?php echo $id; ?>">
+                            <div class="food-items">
+                                <img src="../images/Foodcategory/<?php echo $row['categoryImage']; ?>" alt="">
+                                <div class="category-details">
+                                    <p><?php echo $row['categoryName']; ?></p>
+                                </div>
+                            </div>
+                        </a>
+                        <?php
+                    }
+                }
+                ?>
+            </div>
+        </div>
     </div>
     <!-- Food menu end -->
     <?php include "../includes/menu_includes/footer.php" ?>
