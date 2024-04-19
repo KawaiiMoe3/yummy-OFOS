@@ -25,7 +25,7 @@
             </div>
             <div class="center-nav">
                 <ul>
-                    <li><a href="./">HOME</a></li>
+                    <li><a href="../menu">HOME</a></li>
                     <li><a href="../menu/foodCategory.php">CATEGORY</a></li>
                     <li><a href="../menu/foodMenu.php">MENU</a></li>
                     <li><a href="../faq">FAQs</a></li>
@@ -35,14 +35,23 @@
             if (isset($_SESSION['login'])) {
                 ?>
                 <div class="right-nav">
-                    <a href="#" class="cart">
+                    <?php
+                    $count = 0;
+                    if (isset($_SESSION['cart'])) {
+                        $count = count($_SESSION['cart']);
+                    }
+                    ?>
+                    <a href="../checkout" class="cart">
                         <img src="../images/Menu/shopping-cart.png" alt="">
-                        <span>0</span>
+                        <span><?php echo $count; ?></span>
                     </a>
                     <div class="dropdown">
-                        <button onclick="myDropdown()" class="dropbtn"><?php echo $_SESSION['login'] ?></button>
+                        <button onclick="myDropdown()" class="dropbtn">
+                            <i class="fa-regular fa-user" style="color: #ffffff;"></i>
+                            <?php echo $_SESSION['login'] ?>
+                        </button>
                         <div id="myDropdown" class="dropdown-content">
-                            <a href="#home">
+                            <a href="../myAccount">
                                 <img src="../images/Menu/user.png" alt="">
                                 My Account
                             </a>

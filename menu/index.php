@@ -58,22 +58,8 @@
                                 <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
                             </div>
                             <p><?php echo $row['foodDescription']; ?></p>
-                            <?php
-                            if (isset($_SESSION['login'])){
-                                ?>
-                                <a href="#">
-                                    Add To Cart
-                                </a>
-                                <?php
-                            }
-                            else{
-                                ?>
-                                <a href="../login">
-                                    Add To Cart
-                                </a>
-                                <?php
-                            }
-                            ?>
+                            <!-- Add To cart button -->
+                            <?php include "../includes/menu_includes/addToCart.php"; ?>
                         </div>
                     </div>
                     <?php

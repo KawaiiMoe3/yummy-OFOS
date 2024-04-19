@@ -7,8 +7,8 @@
             <?php
             if (isset($_SESSION['login'])) {
                 ?>
-                <h1>Begin<span></span></h1>
-                <h1>Your Tasty,<span></span></h1>
+                <h1>Begin Yours<span></span></h1>
+                <h1>Tasty in YUMMY,<span></span></h1>
                 <h1><?php echo $_SESSION['login'] ?><span></span></h1>
                 <?php
             }

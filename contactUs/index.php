@@ -6,7 +6,7 @@
     <title>Contact Us | YUMMY</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="icon" type="image.x-icon" href="../images/index/Logo Files/For Web/Favicons/browser.png">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../css/contactUs.css">
 	<!-- Include jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script>
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="contactForm">
-                <form id="contactForm" action="db.php" method="post">
+                <form id="contactForm" action="contactUs.php" method="post">
                     <h2>Send Message</h2>
                     <div class="inputBox">
                         <input type="text" id="name" name="name" required="required" placeholder="">
@@ -68,6 +68,7 @@
 						<span class="error" id="messageErr"></span>
                     </div>     
                     <div class="inputBox">
+                        <button onclick="history.back()">Back</button>
                         <input type="submit" name="create" value="Send">
                     </div>
                 </form>

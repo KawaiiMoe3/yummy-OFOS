@@ -4,7 +4,7 @@
 $dbHost = 'localhost';
 $dbUsername = 'root';
 $dbPassword = '';
-$dbName = 'yummy';
+$dbName = 'yummydb';
 
 // Connect to database
 $conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
@@ -27,7 +27,7 @@ if(isset($_POST['create'])){
 		mysqli_stmt_execute($insert_stmt);
 		
         mysqli_stmt_close($insert_stmt);	
-		header("Location: index.html");
+		header("Location: ../");
 		exit(); // Stop further execution
 		
     }
