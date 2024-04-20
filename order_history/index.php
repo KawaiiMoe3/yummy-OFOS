@@ -7,6 +7,7 @@
 <html>
 <head>
     <title>Order History | YUMMY</title>
+    <link rel="icon" type="image.x-icon" href="../images/index/Logo Files/For Web/Favicons/browser.png">
     <link rel="stylesheet" href="../css/orderHistory.css">
 </head>
 <body>
