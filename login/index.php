@@ -17,8 +17,10 @@ if(isset($_POST['login'])){
 	$count = mysqli_num_rows($res);
 
 	if ($count == 1) {
-		//User available and login
+		$row = mysqli_fetch_assoc($res);
+		//User available to login and store the username and id into session
 		$_SESSION['login'] = $username;
+		$_SESSION['user_id'] = $row['id'];
 		header('Location: ../menu');
 		exit();
 	}

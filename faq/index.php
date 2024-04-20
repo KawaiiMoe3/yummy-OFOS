@@ -1,9 +1,11 @@
+<?php $pageTitle = "FAQs | YUMMY" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs</title>
+    <link rel="icon" type="image.x-icon" href="../images/index/Logo Files/For Web/Favicons/browser.png">
+    <title><?php echo $pageTitle; ?></title>
 </head>
 <link rel="stylesheet" href="../css/faq.css">
 <body>

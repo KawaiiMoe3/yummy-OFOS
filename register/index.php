@@ -167,7 +167,16 @@ if(isset($_POST['create'])){
 		}
 
 		function isValidPhoneNumber(phoneNumber) {
-			return /^\d{10}$/.test(phoneNumber);
+			/*
+				Types of valid Malaysian telephone numbers:
+				1. +6012-3456789
+				2. 012-3456789
+				3. +60-12-3456789
+				4. 0123456789
+				5. 60123456789
+				6. 012-345678901 (11 digits for U Mobile user)
+			 */
+			return /^(?:\+?6?0)?(?:\d{1,2}-?){1,2}\d{4,11}$/.test(phoneNumber);
 		}
     </script>
 

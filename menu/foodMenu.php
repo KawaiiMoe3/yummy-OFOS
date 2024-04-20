@@ -1,3 +1,15 @@
+<?php $pageTitle = "Food Menu | YUMMY" ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $pageTitle; ?></title>
+    <link rel="icon" type="image.x-icon" href="../images/index/Logo Files/For Web/Favicons/browser.png">
+    
+    <link rel="stylesheet" href="../css/defaultCss.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
     <?php
         include "../includes/menu_includes/header.php";
     ?>
@@ -45,45 +57,25 @@
             </div>
             <div class="food-container">
                 <?php
-                $sql = "SELECT * FROM foodmenu";
+                $sql = "SELECT * FROM foodmenu ORDER BY foodName ASC";
                 $foodMenu = mysqli_query($conn, $sql);
 
-                if (isset($_SESSION['login'])) {
-                    while($row = mysqli_fetch_assoc($foodMenu)){
-                    ?>
-                    <div class="food-items">
-                        <img src="../images/FoodMenu/<?php echo $row['foodImage']; ?>" alt="">
-                        <div class="food-details">
-                            <div class="details-sub">
-                                <h5><?php echo $row['foodName']; ?></h5>
-                                <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
-                            </div>
-                            <p><?php echo $row['foodDescription']; ?></p>
-                            <a href="#">
-                                Add To Cart
-                            </a>
+                while($row = mysqli_fetch_assoc($foodMenu)){
+                ?>
+                <div class="food-items">
+                    <img src="../images/FoodMenu/<?php echo $row['foodImage']; ?>" alt="">
+                    <div class="food-details">
+                        <div class="details-sub">
+                            <h5><?php echo $row['foodName']; ?></h5>
+                            <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
                         </div>
+                        <p><?php echo $row['foodDescription']; ?></p>
+
+                        <!-- Add To cart button -->
+                        <?php include "../includes/menu_includes/addToCart.php"; ?>
                     </div>
+                </div>
                 <?php
-                    }
-                }else{
-                    while($row = mysqli_fetch_assoc($foodMenu)){
-                    ?>
-                    <div class="food-items">
-                        <img src="../images/FoodMenu/<?php echo $row['foodImage']; ?>" alt="">
-                        <div class="food-details">
-                            <div class="details-sub">
-                                <h5><?php echo $row['foodName']; ?></h5>
-                                <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
-                            </div>
-                            <p><?php echo $row['foodDescription']; ?></p>
-                            <a href="../login">
-                                Add To Cart
-                            </a>
-                        </div>
-                    </div>
-                    <?php
-                    }
                 }
                 ?>
             </div>

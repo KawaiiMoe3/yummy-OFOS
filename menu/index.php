@@ -1,7 +1,18 @@
+<?php $pageTitle = "Home | YUMMY" ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $pageTitle; ?></title>
+    <link rel="icon" type="image.x-icon" href="../images/index/Logo Files/For Web/Favicons/browser.png">
+    
+    <link rel="stylesheet" href="../css/defaultCss.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
 <?php
     include "../includes/menu_includes/header.php" 
 ?>
-
     <!-- Slider start -->
     <div class="container">
         <div class="slider">
@@ -58,22 +69,8 @@
                                 <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
                             </div>
                             <p><?php echo $row['foodDescription']; ?></p>
-                            <?php
-                            if (isset($_SESSION['login'])){
-                                ?>
-                                <a href="#">
-                                    Add To Cart
-                                </a>
-                                <?php
-                            }
-                            else{
-                                ?>
-                                <a href="../login">
-                                    Add To Cart
-                                </a>
-                                <?php
-                            }
-                            ?>
+                            <!-- Add To cart button -->
+                            <?php include "../includes/menu_includes/addToCart.php"; ?>
                         </div>
                     </div>
                     <?php
@@ -107,22 +104,8 @@
                                 <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
                             </div>
                             <p><?php echo $row['foodDescription']; ?></p>
-                            <?php
-                            if (isset($_SESSION['login'])){
-                                ?>
-                                <a href="#">
-                                    Add To Cart
-                                </a>
-                                <?php
-                            }
-                            else{
-                                ?>
-                                <a href="../login">
-                                    Add To Cart
-                                </a>
-                                <?php
-                            }
-                            ?>
+                            <!-- Add To cart button -->
+                            <?php include "../includes/menu_includes/addToCart.php"; ?>
                         </div>
                     </div>
                     <?php
@@ -156,22 +139,8 @@
                                 <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
                             </div>
                             <p><?php echo $row['foodDescription']; ?></p>
-                            <?php
-                            if (isset($_SESSION['login'])){
-                                ?>
-                                <a href="#">
-                                    Add To Cart
-                                </a>
-                                <?php
-                            }
-                            else{
-                                ?>
-                                <a href="../login">
-                                    Add To Cart
-                                </a>
-                                <?php
-                            }
-                            ?>
+                            <!-- Add To cart button -->
+                            <?php include "../includes/menu_includes/addToCart.php"; ?>
                         </div>
                     </div>
                     <?php
@@ -205,22 +174,8 @@
                                 <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
                             </div>
                             <p><?php echo $row['foodDescription']; ?></p>
-                            <?php
-                            if (isset($_SESSION['login'])){
-                                ?>
-                                <a href="#">
-                                    Add To Cart
-                                </a>
-                                <?php
-                            }
-                            else{
-                                ?>
-                                <a href="../login">
-                                    Add To Cart
-                                </a>
-                                <?php
-                            }
-                            ?>
+                            <!-- Add To cart button -->
+                            <?php include "../includes/menu_includes/addToCart.php"; ?>
                         </div>
                     </div>
                     <?php
@@ -254,22 +209,8 @@
                                 <h5 class="food-price">RM <?php echo $row['foodPrice']; ?></h5>
                             </div>
                             <p><?php echo $row['foodDescription']; ?></p>
-                            <?php
-                            if (isset($_SESSION['login'])){
-                                ?>
-                                <a href="#">
-                                    Add To Cart
-                                </a>
-                                <?php
-                            }
-                            else{
-                                ?>
-                                <a href="../login">
-                                    Add To Cart
-                                </a>
-                                <?php
-                            }
-                            ?>
+                            <!-- Add To cart button -->
+                            <?php include "../includes/menu_includes/addToCart.php"; ?>
                         </div>
                     </div>
                     <?php
@@ -287,65 +228,5 @@
         </div>
     </div>
     <!-- View All Button end -->
-
-    <!-- Shopping Cart start -->
-    <div class="cartTab">
-        <h1>Food Cart</h1>
-        <div class="listCart">
-            <div class="item">
-                <div class="image">
-                    <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="">
-                </div>
-                <div class="name">
-                    Salmon Fried Rice
-                </div>
-                <div class="totalPrice">
-                    RM 15.00
-                </div>
-                <div class="quantity">
-                    <span class="minus">&lt;</span>
-                    <span>1</span>
-                    <span class="plus">&gt;</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="image">
-                    <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="">
-                </div>
-                <div class="name">
-                    Salmon Fried Rice
-                </div>
-                <div class="totalPrice">
-                    RM 15.00
-                </div>
-                <div class="quantity">
-                    <span class="minus">&lt;</span>
-                    <span>1</span>
-                    <span class="plus">&gt;</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="image">
-                    <img src="../images/Menu/Salmon-Fried-Rice.jpg" alt="">
-                </div>
-                <div class="name">
-                    Salmon Fried Rice
-                </div>
-                <div class="totalPrice">
-                    RM 15.00
-                </div>
-                <div class="quantity">
-                    <span class="minus">&lt;</span>
-                    <span>1</span>
-                    <span class="plus">&gt;</span>
-                </div>
-            </div>
-        </div>
-        <div class="btn">
-            <button class="close">Close</button>
-            <button class="checkOut">Checkout</button>
-        </div>
-    </div>
-    <!-- Shopping Cart end -->
 
     <?php include "../includes/menu_includes/footer.php" ?>

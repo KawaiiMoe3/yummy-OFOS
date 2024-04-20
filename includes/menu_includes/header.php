@@ -1,21 +1,10 @@
-<?php 
+<?php
 	include "../db_setup/db.php"; 
     session_start();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YUMMY | Menu</title>
-    <link rel="icon" type="image.x-icon" href="../images/index/Logo Files/For Web/Favicons/browser.png">
-    
-    <link rel="stylesheet" href="../css/defaultCss.css">
-    <link rel="stylesheet" href="../css/menu.css">
-</head>
+
 <body class="">
     <!-- Header start -->
-
     <div class="header">
         <div class="container">
             <div class="left-brand">
@@ -25,7 +14,7 @@
             </div>
             <div class="center-nav">
                 <ul>
-                    <li><a href="./">HOME</a></li>
+                    <li><a href="../menu">HOME</a></li>
                     <li><a href="../menu/foodCategory.php">CATEGORY</a></li>
                     <li><a href="../menu/foodMenu.php">MENU</a></li>
                     <li><a href="../faq">FAQs</a></li>
@@ -35,16 +24,29 @@
             if (isset($_SESSION['login'])) {
                 ?>
                 <div class="right-nav">
-                    <a href="#" class="cart">
+                    <?php
+                    $count = 0;
+                    if (isset($_SESSION['cart'])) {
+                        $count = count($_SESSION['cart']);
+                    }
+                    ?>
+                    <a href="../checkout" class="cart">
                         <img src="../images/Menu/shopping-cart.png" alt="">
-                        <span>0</span>
+                        <span><?php echo $count; ?></span>
                     </a>
                     <div class="dropdown">
-                        <button onclick="myDropdown()" class="dropbtn"><?php echo $_SESSION['login'] ?></button>
+                        <button onclick="myDropdown()" class="dropbtn">
+                            <i class="fa-regular fa-user" style="color: #ffffff;"></i>
+                            <?php echo $_SESSION['login'] ?>
+                        </button>
                         <div id="myDropdown" class="dropdown-content">
-                            <a href="#home">
+                            <a href="../myAccount">
                                 <img src="../images/Menu/user.png" alt="">
                                 My Account
+                            </a>
+                            <a href="../order_history">
+                                <img src="../images/Menu/shopping-bag.png" alt="">
+                                Order History
                             </a>
                             <a href="../logout">
                                 <img src="../images/Menu/logout.png" alt="">
