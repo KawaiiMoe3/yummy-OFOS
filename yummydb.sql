@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 20, 2024 at 10:35 AM
+-- Generation Time: Apr 20, 2024 at 05:04 PM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -156,7 +156,13 @@ CREATE TABLE IF NOT EXISTS `orderitems` (
 INSERT INTO `orderitems` (`orderID`, `foodName`, `foodPrice`, `quantity`) VALUES
 (1, 'Chocolate Lava Cake', '9.9', '5'),
 (1, 'Apple Pie', '8.9', '4'),
-(1, '100 Plus', '2.5', '5');
+(1, '100 Plus', '2.5', '5'),
+(2, 'Chicken Caesar Wrap', '5.9', '2'),
+(2, 'Grapes Juice', '3.9', '2'),
+(3, 'Apple Pie', '8.9', '6'),
+(3, '100 Plus', '2.5', '1'),
+(3, 'Chee Cheong Fun', '9.9', '1'),
+(3, 'Chicken Caesar Wrap', '5.9', '1');
 
 -- --------------------------------------------------------
 
@@ -179,14 +185,16 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `shippingFee` varchar(255) NOT NULL,
   `totalAmount` varchar(255) NOT NULL,
   PRIMARY KEY (`orderID`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`orderID`, `orderDate`, `username`, `email`, `phoneNumber`, `address`, `paymentMethod`, `orderStatus`, `subtotal`, `tax`, `shippingFee`, `totalAmount`) VALUES
-(1, '2024-04-20 17:55:04', 'test3', 'test3@gmail.com', '0123454545', '123, jalan hi, taman hi,43000, sungai long, kajang, selangor', 'FPX-Banking', 'Order Placed', '97.60', '5.86', '4.99', '108.45');
+(1, '2024-04-20 17:55:04', 'test3', 'test3@gmail.com', '0123454545', '123, jalan hi, taman hi,43000, sungai long, kajang, selangor', 'FPX-Banking', 'Order Placed', '97.60', '5.86', '4.99', '108.45'),
+(2, '2024-04-20 20:48:30', 'test4', 'test4@gmail.com', '0123456789', '123, jalan hi, taman hi,43000, sungai long, kajang', 'credit-card', 'Order Placed', '19.60', '1.18', '4.99', '25.77'),
+(3, '2024-04-21 00:35:04', 'test3', 'test3@gmail.com', '0123454545', '123, jalan hi, taman hi,43000, sungai long, kajang, selangor', 'credit-card', 'Order Placed', '71.70', '4.30', '4.99', '80.99');
 
 -- --------------------------------------------------------
 
@@ -203,14 +211,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `address` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `phoneNumber`, `address`, `password`) VALUES
-(7, 'test3', 'test3@gmail.com', '0123454545', '123, jalan hi, taman hi,43000, sungai long, kajang, selangor', '25d55ad283aa400af464c76d713c07ad');
+(8, 'test2', 'test2@gmail.com', '0123456789', '123, jalan hi, taman hi,43000, sungai long, kajang', '25d55ad283aa400af464c76d713c07ad'),
+(9, 'test4', 'test4@gmail.com', '0123456789', '123, jalan hi, taman hi,43000, sungai long, kajang', '25d55ad283aa400af464c76d713c07ad'),
+(7, 'test3', 'test3@gmail.com', '0123454545', '123, jalan hi, taman hi,43000, sungai long, kajang, selangor', '25d55ad283aa400af464c76d713c07ad'),
+(10, 'asd', 'asd@gmail.com', '012-345678901', '123, jalan hi, taman hi,43000, sungai long, kajang, selangor', '25d55ad283aa400af464c76d713c07ad');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

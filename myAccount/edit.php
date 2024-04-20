@@ -100,7 +100,7 @@
             <?php
 
             $currentUser = $_SESSION['login'];
-            $id  =$_SESSION['user_id'];
+            $id = $_SESSION['user_id'];
             
             $user = "SELECT * FROM users WHERE username = '$currentUser' AND id = '$id'";
             $res = mysqli_query($conn,$user);

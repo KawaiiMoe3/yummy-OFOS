@@ -1,6 +1,18 @@
-<?php
+<?php $pageTitle = "Category | YUMMY" ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $pageTitle; ?></title>
+    <link rel="icon" type="image.x-icon" href="../images/index/Logo Files/For Web/Favicons/browser.png">
+    
+    <link rel="stylesheet" href="../css/defaultCss.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+    <?php
         include "../includes/menu_includes/header.php";
-    ?>
+        ?>
     <!-- Slider start -->
     <div class="container">
         <div class="slider">

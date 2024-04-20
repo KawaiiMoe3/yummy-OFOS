@@ -1,3 +1,15 @@
+<?php $pageTitle = "Filtered Food | YUMMY" ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $pageTitle; ?></title>
+    <link rel="icon" type="image.x-icon" href="../images/index/Logo Files/For Web/Favicons/browser.png">
+    
+    <link rel="stylesheet" href="../css/defaultCss.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
 <?php
         include "../includes/menu_includes/header.php";
 ?>
@@ -52,6 +64,13 @@
                         </div>
                         <?php
                     }
+                } else {
+                    ?>
+                    <div class="cartEmptyInfo">
+                        <p class="cartEmptyMsg">Sorry, this category currently has no available food items. Please check back later for updates.</p>
+                        <p><a class="toViewMenu" href="../menu">View Menu</a></p>
+                    </div>
+                    <?php
                 }
                 ?>
             </div>

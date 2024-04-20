@@ -1,6 +1,11 @@
 <?php
+
+    // Initialize the cart for the current user if it doesn't exist
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = array();
+    }
     //Check login status
-    if (isset($_SESSION['login'])) {
+    if (isset($_SESSION['login']) && isset($_SESSION['user_id'])) {
         //logged in
         ?>
         <form action="" method="post">
@@ -46,7 +51,8 @@
                         'food_image' => $_POST['food_image'], 
                         'food_name'=>$_POST['food_name'], 
                         'food_price'=>$_POST['food_price'], 
-                        'Quantity'=>1);
+                        'Quantity'=>1
+                    );
                     echo "<script>
                         alert('Foods added into your cart.');
                         window.location.href = '../menu/foodMenu.php';

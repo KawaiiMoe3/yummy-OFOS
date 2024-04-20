@@ -1,3 +1,15 @@
+<?php $pageTitle = "Food Cart Checkout | YUMMY" ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $pageTitle; ?></title>
+    <link rel="icon" type="image.x-icon" href="../images/index/Logo Files/For Web/Favicons/browser.png">
+    
+    <link rel="stylesheet" href="../css/defaultCss.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
 <?php
     include "../includes/menu_includes/header.php";
 ?>
@@ -55,7 +67,7 @@
             <div class="summary">
                 <div class="subtotal">Subtotal: RM <span id="subtotal"></span></div>
                 <div class="tax">Tax(6%): RM <span id="tax"></span></div>
-                <div class="shipping">Shipping: RM <span id="shipping"></span></div>
+                <div class="shipping">Delivery Fee: RM <span id="shipping"></span></div>
                 <div class="total">Total: RM <span id="totalAmount"></span></div>
             </div>
             <?php
@@ -81,11 +93,20 @@
                         <div class="payment-method">
                             <h2>Select Payment Method</h2>
                             <input type="radio" id="credit-card" name="paymentMethod" value="credit-card" checked>
-                            <label for="credit-card">Credit Card</label><br>
+                            <label for="credit-card">
+                                <i class="fa-regular fa-credit-card fa-lg"></i>
+                                Credit Card
+                            </label><br>
                             <input type="radio" id="paypal" name="paymentMethod" value="paypal">
-                            <label for="paypal">PayPal</label><br>
+                            <label for="paypal">
+                                <i class="fa-brands fa-paypal fa-lg"></i>
+                                PayPal
+                            </label><br>
                             <input type="radio" id="bank-transfer" name="paymentMethod" value="FPX-Banking">
-                            <label for="bank-transfer">FPX Banking</label><br>
+                            <label for="bank-transfer">
+                                <i class="fa-solid fa-money-bill-transfer fa-lg"></i>
+                                FPX Banking
+                            </label><br>
                         </div>
                         <div class="checkout-buttons">
                             <button class="checkoutBtn" name="proceedToCheckout">

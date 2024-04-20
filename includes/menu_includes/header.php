@@ -1,21 +1,10 @@
-<?php 
+<?php
 	include "../db_setup/db.php"; 
     session_start();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YUMMY | Menu</title>
-    <link rel="icon" type="image.x-icon" href="../images/index/Logo Files/For Web/Favicons/browser.png">
-    
-    <link rel="stylesheet" href="../css/defaultCss.css">
-    <link rel="stylesheet" href="../css/menu.css">
-</head>
+
 <body class="">
     <!-- Header start -->
-
     <div class="header">
         <div class="container">
             <div class="left-brand">
@@ -54,6 +43,10 @@
                             <a href="../myAccount">
                                 <img src="../images/Menu/user.png" alt="">
                                 My Account
+                            </a>
+                            <a href="../order_history">
+                                <img src="../images/Menu/shopping-bag.png" alt="">
+                                Order History
                             </a>
                             <a href="../logout">
                                 <img src="../images/Menu/logout.png" alt="">
