@@ -25,6 +25,75 @@ quantityBtns.forEach(btn => {
     })
 })
 
+//Get the removeBtn to remove food from cart
+const removeBtns = document.getElementsByClassName('removeBtn');
+
+// Iterate over each element with the class name "removeBtn"
+for (let i = 0; i < removeBtns.length; i++) {
+    // Add click event listener to each element
+    removeBtns[i].addEventListener('click', function(event) {
+
+        // Display confirmation dialog when clicked
+        const confirmed = confirm("Confirm to remove this food from your cart?");
+        
+        // If user confirms, allow form submission
+        if (confirmed) {
+            return true;
+        } else {
+            event.preventDefault(); // Prevent form submission if confirmation is not confirmed
+            return false;
+        }
+    });
+}
+
+//Calculate subtotal for proceed to checkout
+let totalSubtotalResult = 0
+let taxAmount = 0
+let total = 0
+const taxRate = 0.06
+const shippingAmount = 4.99
+
+let fprice = document.getElementsByClassName('fprice')
+let quantityInput = document.getElementsByClassName('quantityInput')
+let totalFPrice = document.getElementsByClassName('totalFPrice')
+
+let subtotal = document.getElementById('subtotal')
+let subtotalInput = document.getElementById('subtotalInput')
+let tax = document.getElementById('tax')
+let taxInput = document.getElementById('taxInput')
+let shipping = document.getElementById('shipping')
+let shippingInput = document.getElementById('shippingInput')
+let totalAmount = document.getElementById('totalAmount')
+let totalAmountInput = document.getElementById('totalAmountInput')
+function calSubTotal() {
+    for (let i = 0; i < fprice.length; i++) {
+        // Convert the value of fprice and quantityInput to numbers
+        const price = parseFloat(fprice[i].value);
+        const quantity = parseFloat(quantityInput[i].value);
+
+        totalFPrice[i].innerHTML = "RM " + (price * quantity).toFixed(2)
+        totalSubtotalResult += price * quantity
+    }
+    // Ensure totalSubtotalResult has only two decimal places
+    totalSubtotalResult = totalSubtotalResult.toFixed(2);
+    taxAmount = (totalSubtotalResult * taxRate).toFixed(2)
+
+    //Show the result
+    subtotal.innerHTML = totalSubtotalResult
+    subtotalInput.value = totalSubtotalResult
+
+    tax.innerHTML = taxAmount
+    taxInput.value = taxAmount
+
+    shipping.innerHTML = shippingAmount
+    shippingInput.value = shippingAmount
+
+    total = parseFloat(totalSubtotalResult) + parseFloat(taxAmount) + parseFloat(shippingAmount);
+    totalAmount.innerHTML = total.toFixed(2)
+    totalAmountInput.value = total.toFixed(2)
+}
+calSubTotal()
+
 // // Sample data for demonstration
 // const items = [
 //     { name: "Product 1", image: "image1.jpg", price: 10 },

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 18, 2024 at 05:21 PM
+-- Generation Time: Apr 20, 2024 at 10:35 AM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `yummydb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contactus`
+--
+
+DROP TABLE IF EXISTS `contactus`;
+CREATE TABLE IF NOT EXISTS `contactus` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `message` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contactus`
+--
+
+INSERT INTO `contactus` (`id`, `name`, `email`, `message`) VALUES
+(1, 'jm', 'ab@gmail.com', 'halo'),
+(7, '123', 'test2@gmail.com', 'halo'),
+(8, '12345', 'test2@gmail.com', 'halo');
 
 -- --------------------------------------------------------
 
@@ -114,6 +138,59 @@ INSERT INTO `foodmenu` (`id`, `foodName`, `foodDescription`, `foodCategory`, `fo
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `orderitems`
+--
+
+DROP TABLE IF EXISTS `orderitems`;
+CREATE TABLE IF NOT EXISTS `orderitems` (
+  `orderID` int NOT NULL,
+  `foodName` varchar(255) NOT NULL,
+  `foodPrice` varchar(255) NOT NULL,
+  `quantity` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+--
+-- Dumping data for table `orderitems`
+--
+
+INSERT INTO `orderitems` (`orderID`, `foodName`, `foodPrice`, `quantity`) VALUES
+(1, 'Chocolate Lava Cake', '9.9', '5'),
+(1, 'Apple Pie', '8.9', '4'),
+(1, '100 Plus', '2.5', '5');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE IF NOT EXISTS `orders` (
+  `orderID` int NOT NULL AUTO_INCREMENT,
+  `orderDate` datetime NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phoneNumber` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `paymentMethod` varchar(255) NOT NULL,
+  `orderStatus` varchar(255) NOT NULL,
+  `subtotal` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `tax` varchar(255) NOT NULL,
+  `shippingFee` varchar(255) NOT NULL,
+  `totalAmount` varchar(255) NOT NULL,
+  PRIMARY KEY (`orderID`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`orderID`, `orderDate`, `username`, `email`, `phoneNumber`, `address`, `paymentMethod`, `orderStatus`, `subtotal`, `tax`, `shippingFee`, `totalAmount`) VALUES
+(1, '2024-04-20 17:55:04', 'test3', 'test3@gmail.com', '0123454545', '123, jalan hi, taman hi,43000, sungai long, kajang, selangor', 'FPX-Banking', 'Order Placed', '97.60', '5.86', '4.99', '108.45');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -133,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `phoneNumber`, `address`, `password`) VALUES
-(7, 'test3', 'test3@gmail.com', '0123456789', '123, jalan hi, taman hi,43000, sungai long, kajang', '25d55ad283aa400af464c76d713c07ad');
+(7, 'test3', 'test3@gmail.com', '0123454545', '123, jalan hi, taman hi,43000, sungai long, kajang, selangor', '25d55ad283aa400af464c76d713c07ad');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
